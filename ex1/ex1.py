@@ -1,11 +1,11 @@
-import numpy as np
-import matplotlib.pyplot as plt
-import sys
+""" Machine Learning Online Class - Exercise 1: Linear Regression """
 
-from mpl_toolkits.mplot3d import Axes3D
-from plot import plot_data
+import matplotlib.pyplot as plt
+import numpy as np
+
 from compute_cost import compute_cost
 from gradient_descent import gradient_descent
+from mpl_toolkits.mplot3d import Axes3D
 
 
 print "======================= Part 2: Plotting ======================="
@@ -17,11 +17,8 @@ linear_plot = plt.figure()
 ax1 = linear_plot.add_subplot(111)
 ax1.plot(X, y, 'rx')
 
-#plot_data(X, y)
-#plt.plot(X, y, 'rx')
 plt.xlabel('Population of City in 10,000s')
 plt.ylabel('Profit in $10,000s')
-#raw_input("Press the <ENTER> key to continue...")
 
 print " =================== Part 3: Gradient descent ==================="
 print 'Running Gradient Descent ...'
@@ -29,20 +26,20 @@ X = np.array([np.ones(m), X]).transpose() # Add a column of ones to x
 theta = np.zeros((2, 1)) # initialize fitting parameters
 
 # Some gradient descent settings
-iterations = 1500;
-alpha = 0.01;
+iterations = 1500
+alpha = 0.01
 
 # compute and display initial cost
 print 'Initial cost is', compute_cost(X, y, theta)
 # run gradient descent
-theta, J_history = gradient_descent(X, y, theta, alpha, iterations);
+theta, J_history = gradient_descent(X, y, theta, alpha, iterations)
 
 # print theta to screen
 print 'Theta found by gradient descent:\n', theta
 print 'J_history=', J_history
 
 # Plot the linear fit
-ax1.plot(X[:,1], np.dot(X, theta), 'k-')
+ax1.plot(X[:, 1], np.dot(X, theta), 'k-')
 
 # Predict values for population sizes of 35,000 and 70,000
 predict1 = np.dot([1, 10], theta)

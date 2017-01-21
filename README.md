@@ -2,8 +2,8 @@
 
 I'm taking the Machine Learning course offered by Coursera.</br>
 
-They use Octave/Matlab in this lecture, however, I prefer Python and I've played around with libSVM before. 
-I decide to use Pyhton for all the exercises.</br>
+They use Octave/Matlab in this lecture, however, I prefer Python and I've played around with libSVM before.
+I decide to use Pyhton for all the exercises, although it's very painful to rewrite all the matlab files provided into Python.</br>
 
 It's actaully quite funny that I built the app [EMMA](https://github.com/doggyeh/EMMA-Machine-Learning) with
 Machine Learning(libSVM) and Natural Language Processing(NLTK) with zero knowledge of both at first. That's a
